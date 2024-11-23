@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #111111;
+  --page: #1d1d1d;
+  --border: #525252;
+  --triggered-border: #832b3e;
+  --foreground: #ffffff;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+h1, h2, h3, h4 {
+  @apply font-bold;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+.region {
+  @apply border border-[var(--border)] p-2 rounded-lg shadow-lg backdrop-blur-md;
+}
+
+.button {
+  @apply region hover:border-[var(--triggered-border)] transition-colors;
+}
+
+.link {
+  @apply text-blue-300 underline underline-offset-2 hover:text-blue-400;
+}
+}
