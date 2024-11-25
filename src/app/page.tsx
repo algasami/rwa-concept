@@ -14,7 +14,33 @@ const KEYPOINTS: Array<{ title: string; description: React.ReactNode }> = [
   },
   {
     title: "Performance",
-    description: <p></p>,
+    description: (
+      <p>
+        <strong>Uncompromised Performance.</strong> [Company Name] establishes
+        an efficient bidirectional gateway between you and Web3.0.
+      </p>
+    ),
+  },
+  {
+    title: "Click & Go",
+    description: (
+      <p>
+        No need to worry about Web3 Jargons. Our service offers a full-fledged
+        wallet abstraction system that reduces the quondam complex tasks of
+        setting up wallet accounts into a simple "click", powered by [Add Hot
+        Wallet Provider Name].
+      </p>
+    ),
+  },
+  {
+    title: "Seize the Day",
+    description: (
+      <p>
+        With our service, you are always one step ahead of other competitors via
+        our comprehensive dashboard system, which offers an assortment of
+        analysis tools to ensure your success.
+      </p>
+    ),
   },
 ];
 
@@ -28,7 +54,7 @@ export default function Home() {
       <ul className="flex flex-row flex-wrap justify-center lg:justify-start gap-5">
         {KEYPOINTS.map(({ title, description }) => (
           <li className="region lg:max-w-[30rem]">
-            <h2 className="uppercase">{title}</h2>
+            <h2 className="uppercase text-violet-400">{title}</h2>
             {description}
           </li>
         ))}

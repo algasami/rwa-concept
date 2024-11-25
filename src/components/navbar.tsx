@@ -7,7 +7,7 @@ export const Navbar = () => {
       <h1 className="font-extrabold">R.C.</h1>
       <ul className="flex flex-row lg:flex-col items-center lg:items-stretch gap-5">
         {NAVLINKS.map(({ title, url }) => (
-          <Link href={url}>
+          <Link href={url} key={url}>
             <li className="button text-center">{title}</li>
           </Link>
         ))}
