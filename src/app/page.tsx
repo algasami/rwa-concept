@@ -53,7 +53,7 @@ export default function Home() {
       </p>
       <ul className="flex flex-row flex-wrap justify-center lg:justify-start gap-5">
         {KEYPOINTS.map(({ title, description }) => (
-          <li className="region lg:max-w-[30rem]">
+          <li className="region lg:max-w-[30rem]" key={title}>
             <h2 className="uppercase text-violet-400">{title}</h2>
             {description}
           </li>
