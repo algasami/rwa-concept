@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar } from "@/components/navbar";
 import { geist, geistMono } from "@/utils/font";
 import { Footer } from "@/components/footer";
-import Image from "next/image";
+import { Web3Provider } from "@/components/web3-provider";
+import "@rainbow-me/rainbowkit/styles.css";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "RWA Concept",
-    template: "%s | RWA Concept",
+    absolute: "Ticket Tool",
+    template: "%s | Ticket Tool",
   },
   description: "This is a RWA Concept website.",
 };
@@ -21,13 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased font-sans ${geist.variable} ${geistMono.variable} flex flex-col min-h-[100vh] bg-[url('/imgs/bg-forest.jpg')] bg-cover`}
+        className={`antialiased font-sans ${geist.variable} ${geistMono.variable} flex flex-col min-h-[100vh] bg-cover bg-gradient-to-r from-violet-900 to-slate-900`}
       >
-        <div className={`flex flex-col lg:flex-row justify-center`}>
-          <Navbar />
-          <div className="region rounded-lg p-2 shadow-lg backdrop-blur-sm bg-opacity-80 bg-stone-800 m-4 content-page lg:w-[80rem]">
-            {children}
-          </div>
+        <div className="flex flex-row justify-center">
+          <Web3Provider>{children}</Web3Provider>
         </div>
         <Footer />
       </body>

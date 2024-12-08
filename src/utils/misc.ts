@@ -4,10 +4,10 @@ export const NAVLINKS: Array<{
 }> = [
   {
     title: "About",
-    url: "/",
+    url: "/seller",
   },
   {
-    title: "Dashboard",
-    url: "/dashboard",
+    title: "Account",
+    url: "/seller/me",
   },
 ];
